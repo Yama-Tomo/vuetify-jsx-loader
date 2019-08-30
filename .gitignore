@@ -1,0 +1,9 @@
+.vs
+.vscode
+.idea
+/node_modules
+yarn_error.log
+
+*.sw*
+*.iml
+ 
