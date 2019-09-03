@@ -73,4 +73,19 @@ describe('only logic file (no implements `template section`)', () => {
     const expected = [null, content, sourceMap]
     expect(context.callback.mock.calls[0]).toEqual(expected)
   })
+
+  describe('.ts file', () => {
+    test('should be no modify content', async () => {
+      const context = {
+        ...helper.webpackContext(),
+        resourcePath: `${path.resolve(__dirname)}/fixture/ts/general.js`
+      }
+      const content = 'dummy source-code'
+      const sourceMap = 'dummy source-map'
+      await loader.call(context, content, sourceMap)
+
+      const expected = [null, content, sourceMap]
+      expect(context.callback.mock.calls[0]).toEqual(expected)
+    })
+  })
 })
