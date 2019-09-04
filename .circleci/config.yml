@@ -1,0 +1,72 @@
+version: 2.1
+
+executors:
+  node:
+    docker:
+      - image: node:12.9-alpine
+
+commands:
+  install_depend_packages_on_node:
+    steps:
+      - run:
+          name: install depend packages
+          command: apk add --no-cache --update ca-certificates
+
+  yarn_install:
+    parameters:
+      lock_file:
+        type: string
+    steps:
+      - restore_cache:
+          keys:
+            - node-modules-v1-{{ checksum "<<parameters.lock_file>>" }}
+      - run:
+          command: yarn
+  save_node_module_cache:
+    parameters:
+      lock_file:
+        type: string
+      dest:
+        type: string
+    steps:
+      - save_cache:
+          key: node-modules-v1-{{ checksum "<<parameters.lock_file>>" }}
+          paths: <<parameters.dest>>
+
+jobs:
+  test:
+    executor:
+      name: node
+    steps:
+      - checkout
+      - install_depend_packages_on_node  
+      - yarn_install:
+          lock_file: 'yarn.lock'
+      - run:
+          command: yarn lint
+      - run:
+          command: yarn test
+      - save_node_module_cache:
+          lock_file: 'yarn.lock'
+          dest: node_modules
+
+  example_build:
+    executor:
+      name: node
+    steps:
+      - checkout
+      - install_depend_packages_on_node  
+      - yarn_install:
+          lock_file: 'example/yarn.lock'
+      - run:
+          command: cd example && yarn && yarn build
+      - save_node_module_cache:
+          lock_file: 'example/yarn.lock'
+          dest: 'example/node_modules'
+ 
+workflows:
+  build:
+    jobs:
+      - test
+      - example_build
+
