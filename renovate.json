@@ -4,6 +4,14 @@
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)"
   ],
+  "packageRules": [
+    {
+      "depTypeList": [
+        "peerDependencies"
+      ],
+      "enabled": false
+    }
+  ],
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "lockFileMaintenance": {
