@@ -9,7 +9,7 @@ what's about tree-shaking: [vuetify-loader](https://github.com/vuetifyjs/vuetify
 ## usage
 
 ```bash
-npm install --save-dev https://github.com/Yama-Tomo/vuetify-jsx-loader
+npm install --save-dev vuetify-jsx-loader
 ```
 
 ```js
@@ -34,7 +34,7 @@ NOTE: this plugin work to only written by jsx(tsx) file. add `VuetifyLoaderPlugi
 const VuetifyLoaderJsxPlugin = require('vuetify-jsx-loader')
 
 exports.plugins.push(
-  new VuetifyLoaderPlugin({
+  new VuetifyLoaderJsxPlugin({
     match() .....,
     attrsMatch() .....,
     parserOpts: {
