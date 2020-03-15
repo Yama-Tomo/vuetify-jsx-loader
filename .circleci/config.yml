@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node:
     docker:
-      - image: node:12.9-alpine
+      - image: node:12.16-alpine
 
 commands:
   install_depend_packages_on_node:
