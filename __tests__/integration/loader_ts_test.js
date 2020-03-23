@@ -13,7 +13,7 @@ describe('writtern by tsx', () => {
       test('should be insert import statements', async () => {
         const context = {
           ...helper.webpackContext(),
-          resourcePath: `${path.resolve(__dirname)}/fixture/ts/tsx.vue`
+          resourcePath: `${path.resolve(__dirname)}/fixture/ts/tsx.vue`,
         }
         const content = 'dummy source-code'
         const sourceMap = 'dummy source-map'
@@ -30,7 +30,7 @@ describe('writtern by tsx', () => {
           ...helper.webpackContext(),
           resourcePath: `${path.resolve(
             __dirname
-          )}/fixture/ts/tsx_with_decorator.vue`
+          )}/fixture/ts/tsx_with_decorator.vue`,
         }
         const content = 'dummy source-code'
         const sourceMap = 'dummy source-map'
@@ -48,7 +48,7 @@ describe('writtern by tsx', () => {
         ...helper.webpackContext(),
         resourcePath: `${path.resolve(
           __dirname
-        )}/fixture/ts/tsx_with_decorator.tsx`
+        )}/fixture/ts/tsx_with_decorator.tsx`,
       }
       const content = 'dummy source-code'
       const sourceMap = 'dummy source-map'
@@ -64,7 +64,7 @@ describe('only logic file (no implements `template section`)', () => {
   test('should be no modify content', async () => {
     const context = {
       ...helper.webpackContext(),
-      resourcePath: `${path.resolve(__dirname)}/fixture/ts/ts.vue`
+      resourcePath: `${path.resolve(__dirname)}/fixture/ts/ts.vue`,
     }
     const content = 'dummy source-code'
     const sourceMap = 'dummy source-map'
@@ -78,7 +78,7 @@ describe('only logic file (no implements `template section`)', () => {
     test('should be no modify content', async () => {
       const context = {
         ...helper.webpackContext(),
-        resourcePath: `${path.resolve(__dirname)}/fixture/ts/general.js`
+        resourcePath: `${path.resolve(__dirname)}/fixture/ts/general.js`,
       }
       const content = 'dummy source-code'
       const sourceMap = 'dummy source-map'

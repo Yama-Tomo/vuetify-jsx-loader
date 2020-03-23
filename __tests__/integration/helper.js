@@ -9,11 +9,11 @@ const webpackContext = () => ({
   fs: {
     readFile: (filePath, cb) => {
       cb(null, fs.readFileSync(path.resolve(filePath)))
-    }
+    },
   },
-  rootContext: path.resolve(__dirname)
+  rootContext: path.resolve(__dirname),
 })
 
 module.exports = {
-  webpackContext
+  webpackContext,
 }

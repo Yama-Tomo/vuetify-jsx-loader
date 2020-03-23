@@ -3,6 +3,6 @@ module.exports = {
   testPathIgnorePatterns: ['node_modules'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass|sss|styl)$':
-      '<rootDir>/node_modules/jest-css-modules'
-  }
+      '<rootDir>/node_modules/jest-css-modules',
+  },
 }
