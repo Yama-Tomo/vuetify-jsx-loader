@@ -12,7 +12,7 @@ describe('written by jsx', () => {
     test('should be insert import statements', async () => {
       const context = {
         ...helper.webpackContext(),
-        resourcePath: `${path.resolve(__dirname)}/fixture/js/jsx.vue`
+        resourcePath: `${path.resolve(__dirname)}/fixture/js/jsx.vue`,
       }
       const content = 'dummy source-code'
       const sourceMap = 'dummy source-map'
@@ -27,7 +27,7 @@ describe('written by jsx', () => {
     test('should be insert import statements', async () => {
       const context = {
         ...helper.webpackContext(),
-        resourcePath: `${path.resolve(__dirname)}/fixture/js/jsx.jsx`
+        resourcePath: `${path.resolve(__dirname)}/fixture/js/jsx.jsx`,
       }
       const content = 'dummy source-code'
       const sourceMap = 'dummy source-map'
@@ -43,7 +43,7 @@ describe('only logic file (no implements `template section`)', () => {
   test('should be no modify content', async () => {
     const context = {
       ...helper.webpackContext(),
-      resourcePath: `${path.resolve(__dirname)}/fixture/js/js.vue`
+      resourcePath: `${path.resolve(__dirname)}/fixture/js/js.vue`,
     }
     const content = 'dummy source-code'
     const sourceMap = 'dummy source-map'
@@ -57,7 +57,7 @@ describe('only logic file (no implements `template section`)', () => {
     test('should be no modify content', async () => {
       const context = {
         ...helper.webpackContext(),
-        resourcePath: `${path.resolve(__dirname)}/fixture/js/general.js`
+        resourcePath: `${path.resolve(__dirname)}/fixture/js/general.js`,
       }
       const content = 'dummy source-code'
       const sourceMap = 'dummy source-map'

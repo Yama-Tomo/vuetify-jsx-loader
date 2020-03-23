@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = content => {
+module.exports = (content) => {
   // prettier-ignore
   return (
     `${content}\n` +
