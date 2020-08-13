@@ -21,8 +21,8 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "@babel/parser": "^7.10.4",
-    "@babel/traverse": "^7.10.4",
+    "@babel/parser": "^7.11.3",
+    "@babel/traverse": "^7.11.0",
     "loader-utils": "^2.0.0",
     "rewire": "^5.0.0"
   },
@@ -33,12 +33,12 @@
     "jest": "^26.4.0",
     "jest-css-modules": "^2.1.0",
     "prettier": "^2.0.5",
-    "standard-version": "^8.0.0",
+    "standard-version": "^8.0.2",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
-    "vuetify": "^2.3.3",
-    "vuetify-loader": "^1.5.0",
-    "webpack": "^4.43.0"
+    "vuetify": "^2.3.8",
+    "vuetify-loader": "^1.6.0",
+    "webpack": "^4.44.1"
   },
   "peerDependencies": {
     "vue-template-compiler": "^2.6.10",
