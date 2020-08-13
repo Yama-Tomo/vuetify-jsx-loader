@@ -7,13 +7,10 @@ module.exports = {
   env: {
     node: true,
     jest: true,
-    es6: true
+    es6: true,
   },
   rules: {
-    'prettier/prettier': ['error', {'singleQuote': true, 'semi': false}]
+    'prettier/prettier': ['error', { singleQuote: true, semi: false }],
   },
-  extends: [
-    'eslint:recommended',
-    'prettier',
-  ]
+  extends: ['eslint:recommended', 'prettier'],
 }
