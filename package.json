@@ -38,7 +38,7 @@
     "vue-template-compiler": "^2.6.12",
     "vuetify": "^2.3.15",
     "vuetify-loader": "^1.6.0",
-    "webpack": "^4.44.2"
+    "webpack": "^5.2.0"
   },
   "peerDependencies": {
     "vue-template-compiler": "^2.6.10",
