@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node:
     docker:
-      - image: node:12.19-alpine
+      - image: node:14-alpine
         auth:
           username: $DOCKERHUB_USER
           password: $DOCKERHUB_PASSWORD
