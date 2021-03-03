@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/Yama-Tomo/vuetify-jsx-loader/compare/v0.1.3...v0.1.4) (2021-03-03)
+
+
+### Features
+
+* change vue-loader detection process ([127d778](https://github.com/Yama-Tomo/vuetify-jsx-loader/commit/127d77835f50f42f9f10732814ea70b1298bfb57))
+
 ### [0.1.3](https://github.com/Yama-Tomo/vuetify-jsx-loader/compare/v0.1.2...v0.1.3) (2020-08-13)
 
 
