@@ -23,7 +23,7 @@
   "dependencies": {
     "@babel/parser": "^7.13.9",
     "@babel/traverse": "^7.13.0",
-    "loader-utils": "^2.0.0",
+    "loader-utils": "^3.2.0",
     "rewire": "^5.0.0"
   },
   "devDependencies": {
